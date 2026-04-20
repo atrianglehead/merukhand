@@ -1,65 +1,169 @@
-import Image from "next/image";
+import Link from "next/link";
+
+const socialLinks = [
+  {
+    label: "Trianglehead",
+    href: "https://www.youtube.com/@trianglehead",
+    group: "youtube",
+  },
+  {
+    label: "Anirudh Venkatesh",
+    href: "https://www.youtube.com/@anirudh.venkatesh",
+    group: "youtube",
+  },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/a.trianglehead/",
+    group: "social",
+  },
+  {
+    label: "Vocal lessons",
+    href: "https://www.superprof.co.in/learn-from-professional-musician-how-sing-with-your-free-natural-voice.html",
+    group: "superprof",
+  },
+  {
+    label: "Guitar & musicianship",
+    href: "https://www.superprof.co.in/learn-how-use-music-like-language-from-full-time-musician.html",
+    group: "superprof",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
+    <div style={{ maxWidth: 860, margin: "0 auto", background: "#F5F2EB", fontFamily: "var(--font-space-mono), monospace", border: "3px solid #111" }}>
+
+      {/* Nav */}
+      <nav style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "12px 24px", background: "#111" }}>
+        <span style={{ fontFamily: "var(--font-bebas-neue), sans-serif", fontSize: 32, letterSpacing: 2, lineHeight: 1 }}>
+          <span style={{ color: "#F5C842" }}>MERU</span>
+          <span style={{ color: "#E8F0FF" }}>KHAND</span>
+        </span>
+        <div style={{ display: "flex", gap: 20 }}>
+          {["Music", "Sound Insight", "Learn", "Musicians", "Contact"].map((item) => (
+            <a key={item} href="#" style={{ fontFamily: "var(--font-space-mono), monospace", fontSize: 10, color: "#aaa", textDecoration: "none", letterSpacing: 1.5, textTransform: "uppercase" }}>
+              {item}
+            </a>
+          ))}
+        </div>
+      </nav>
+
+      {/* Issue bar */}
+      <div style={{ background: "#F5C842", padding: "5px 24px", display: "flex", alignItems: "center", gap: 16, borderBottom: "2px solid #111" }}>
+        {["A place to discover musical thought", "Est. 2026", "merukhand.com"].map((text, i) => (
+          <span key={i} style={{ display: "flex", alignItems: "center", gap: 16 }}>
+            {i > 0 && <span style={{ width: 4, height: 4, background: "#111", borderRadius: "50%", display: "inline-block" }} />}
+            <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", color: "#111" }}>{text}</span>
+          </span>
+        ))}
+      </div>
+
+      {/* Hero */}
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", borderBottom: "3px solid #111" }}>
+        <div style={{ padding: "32px 28px 28px", borderRight: "3px solid #111", background: "#F5F2EB" }}>
+          <div style={{ display: "inline-block", fontSize: 9, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", border: "1.5px solid #111", padding: "3px 10px", marginBottom: 16, color: "#111" }}>
+            Indie · Music · Knowledge
+          </div>
+          <h1 style={{ fontFamily: "var(--font-bebas-neue), sans-serif", fontSize: 88, lineHeight: 0.9, letterSpacing: 2, margin: 0 }}>
+            <span style={{ color: "#111", display: "block" }}>MERU</span>
+            <span style={{ color: "#E8473F", display: "block" }}>KHAND</span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+        </div>
+        <div style={{ padding: "32px 28px 28px", background: "#111" }}>
+          <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", color: "#F5C842", marginBottom: 10 }}>Our manifesto</div>
+          <p style={{ fontFamily: "Georgia, serif", fontSize: 16, fontStyle: "italic", color: "#EEE8D0", lineHeight: 1.6, margin: "0 0 28px" }}>
+            Finding people through music, and music through people.
           </p>
+          <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+            <a href="/blog" style={{ fontFamily: "var(--font-space-mono), monospace", fontSize: 11, padding: "10px 18px", textDecoration: "none", fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", background: "#F5C842", color: "#111", display: "block" }}>
+              Read Sound Insight
+            </a>
+            <a href="/learn" style={{ fontFamily: "var(--font-space-mono), monospace", fontSize: 11, padding: "10px 18px", textDecoration: "none", fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", background: "transparent", color: "#EEE8D0", border: "2px solid #EEE8D0", display: "block" }}>
+              Book a lesson
+            </a>
+            <a href="/music" style={{ fontFamily: "var(--font-space-mono), monospace", fontSize: 11, padding: "10px 18px", textDecoration: "none", fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", background: "transparent", color: "#888", border: "2px solid #444", display: "block" }}>
+              Browse music
+            </a>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+      </div>
+
+      {/* Main: Sound Insight + Learn */}
+      <div style={{ display: "grid", gridTemplateColumns: "3fr 2fr", borderBottom: "3px solid #111" }}>
+        <div style={{ padding: "28px", borderRight: "3px solid #111" }}>
+          <div style={{ fontFamily: "var(--font-bebas-neue), sans-serif", fontSize: 13, letterSpacing: 3, color: "#E8473F", marginBottom: 16, display: "flex", alignItems: "center", gap: 10 }}>
+            Sound Insight
+            <span style={{ flex: 1, height: 2, background: "#111", display: "block" }} />
+          </div>
+          <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", color: "#E8473F", marginBottom: 8 }}>Latest essay</div>
+          <div style={{ fontFamily: "var(--font-bebas-neue), sans-serif", fontSize: 34, lineHeight: 1.05, color: "#111", marginBottom: 12, letterSpacing: 1 }}>
+            On ragas and the logic of musical constraint
+          </div>
+          <p style={{ fontFamily: "Georgia, serif", fontSize: 13, color: "#444", lineHeight: 1.75, margin: "0 0 16px" }}>
+            What does it mean to improvise within a tradition? An exploration of how deep structure enables, rather than limits, musical freedom — and why the raga system is one of humanity&apos;s most sophisticated musical inventions.
+          </p>
+          <a href="/blog" style={{ fontSize: 10, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", color: "#E8473F", textDecoration: "none", borderBottom: "2px solid #E8473F", paddingBottom: 1 }}>
+            Read the essay →
           </a>
         </div>
-      </main>
+
+        <div style={{ padding: "28px 24px", background: "#EDEAE0" }}>
+          <div style={{ fontFamily: "var(--font-bebas-neue), sans-serif", fontSize: 13, letterSpacing: 3, color: "#111", marginBottom: 16, display: "flex", alignItems: "center", gap: 10 }}>
+            Learn
+            <span style={{ flex: 1, height: 2, background: "#111", display: "block" }} />
+          </div>
+          {[
+            { kicker: "Private lessons", title: "Indian classical music — voice & theory", desc: "One-to-one sessions tailored to your level and goals.", link: "https://www.superprof.co.in/learn-from-professional-musician-how-sing-with-your-free-natural-voice.html", label: "Book a session →" },
+            { kicker: "SuperProf", title: "Guitar & musicianship", desc: "Learn music as a language, from a full-time musician.", link: "https://www.superprof.co.in/learn-how-use-music-like-language-from-full-time-musician.html", label: "See profile →" },
+          ].map((item) => (
+            <div key={item.kicker} style={{ marginBottom: 20, paddingBottom: 20, borderBottom: "1.5px solid #CCC8BC" }}>
+              <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", color: "#555", marginBottom: 6 }}>{item.kicker}</div>
+              <div style={{ fontFamily: "var(--font-bebas-neue), sans-serif", fontSize: 20, letterSpacing: 1, color: "#111", marginBottom: 5 }}>{item.title}</div>
+              <p style={{ fontFamily: "Georgia, serif", fontSize: 12, color: "#666", margin: "0 0 8px", lineHeight: 1.5 }}>{item.desc}</p>
+              <a href={item.link} target="_blank" rel="noopener noreferrer" style={{ fontSize: 10, fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", color: "#111", textDecoration: "none", borderBottom: "1.5px solid #111", paddingBottom: 1 }}>{item.label}</a>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Secondary: Music + Musicians */}
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", borderBottom: "3px solid #111" }}>
+        <div style={{ padding: "22px 28px", borderRight: "3px solid #111", background: "#111" }}>
+          <div style={{ fontFamily: "var(--font-bebas-neue), sans-serif", fontSize: 28, letterSpacing: 2, marginBottom: 6, color: "#F5C842" }}>Music</div>
+          <p style={{ fontFamily: "Georgia, serif", fontSize: 12, lineHeight: 1.6, color: "#aaa", margin: 0 }}>Videos, audio and live recordings across musical traditions. Watch, listen, explore.</p>
+        </div>
+        <div style={{ padding: "22px 28px", background: "#F5F2EB" }}>
+          <div style={{ fontFamily: "var(--font-bebas-neue), sans-serif", fontSize: 28, letterSpacing: 2, marginBottom: 6, color: "#111" }}>Musicians</div>
+          <p style={{ fontFamily: "Georgia, serif", fontSize: 12, lineHeight: 1.6, color: "#555", margin: 0 }}>Artists, teachers and traditions — the community Merukhand is building toward.</p>
+        </div>
+      </div>
+
+      {/* Founder */}
+      <div style={{ display: "grid", gridTemplateColumns: "auto 1fr", borderBottom: "3px solid #111" }}>
+        <div style={{ background: "#E8473F", padding: "24px 20px", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 8, borderRight: "3px solid #111", minWidth: 80 }}>
+          <div style={{ width: 52, height: 52, borderRadius: "50%", background: "#F5F2EB", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "var(--font-bebas-neue), sans-serif", fontSize: 20, color: "#E8473F", border: "2px solid #111" }}>AV</div>
+          <div style={{ fontFamily: "var(--font-bebas-neue), sans-serif", fontSize: 11, letterSpacing: 2, color: "#fff", textAlign: "center", lineHeight: 1.2 }}>Anirudh<br />Venkatesh</div>
+        </div>
+        <div style={{ padding: "22px 28px", background: "#F5F2EB" }}>
+          <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", color: "#E8473F", marginBottom: 8 }}>Founder · Musician · Mentor</div>
+          <p style={{ fontFamily: "Georgia, serif", fontSize: 13, color: "#444", lineHeight: 1.6, margin: "0 0 14px" }}>
+            Music learner, educator, and the mind behind Merukhand — exploring the vast scope of musical traditions and the connections they make possible.
+          </p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+            {socialLinks.map((s) => (
+              <a key={s.href} href={s.href} target="_blank" rel="noopener noreferrer" style={{ fontSize: 9, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", padding: "4px 10px", border: "1.5px solid #111", color: "#111", background: "transparent", textDecoration: "none" }}>
+                {s.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <div style={{ background: "#111", padding: "12px 24px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <span style={{ fontFamily: "var(--font-bebas-neue), sans-serif", fontSize: 14, letterSpacing: 2, color: "#555" }}>MERUKHAND</span>
+        <span style={{ fontSize: 9, letterSpacing: 1.5, textTransform: "uppercase", color: "#444" }}>© 2026 · Built with intention</span>
+      </div>
+
     </div>
   );
 }
