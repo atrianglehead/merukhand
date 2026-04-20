@@ -72,7 +72,7 @@ export default function Home() {
         <div style={{ padding: "32px 28px 28px", background: "#111" }}>
           <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", color: "#F5C842", marginBottom: 10 }}>Intention</div>
           <p style={{ fontFamily: "Georgia, serif", fontSize: 16, fontStyle: "italic", color: "#EEE8D0", lineHeight: 1.6, margin: "0 0 28px" }}>
-            Discovering people through music, and music through people.
+            Discovering music through people, and people through music.
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
             <a href="https://soundinsight.substack.com/" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-space-mono), monospace", fontSize: 11, padding: "10px 18px", textDecoration: "none", fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", background: "#F5C842", color: "#111", display: "block" }}>
@@ -95,34 +95,47 @@ export default function Home() {
             Sound Insight
             <span style={{ flex: 1, height: 2, background: "#111", display: "block" }} />
           </div>
-          <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", color: "#E8473F", marginBottom: 12 }}>Top Article</div>
+          <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", color: "#E8473F", marginBottom: 12 }}>Top Articles</div>
 
-          {/* Post card */}
-          <a
-            href="https://soundinsight.substack.com/p/decoding-melody"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ display: "flex", gap: 16, textDecoration: "none", border: "2px solid #111", background: "#fff", padding: 14, marginBottom: 18 }}
-          >
+          {/* Decoding Melody */}
+          <a href="https://soundinsight.substack.com/p/decoding-melody" target="_blank" rel="noopener noreferrer" style={{ display: "flex", gap: 16, textDecoration: "none", border: "2px solid #111", background: "#fff", padding: 14, marginBottom: 18 }}>
             <div style={{ flexShrink: 0, width: 90, height: 90, overflow: "hidden", border: "1.5px solid #E0DDD4", background: "#F5F2EB" }}>
-              <Image
-                src="/MelodyTriangle.png"
-                alt="Decoding Melody"
-                width={90}
-                height={90}
-                style={{ objectFit: "cover", width: "100%", height: "100%" }}
-              />
+              <Image src="/MelodyTriangle.png" alt="Decoding Melody" width={90} height={90} style={{ objectFit: "cover", width: "100%", height: "100%" }} />
             </div>
             <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", gap: 6 }}>
-              <div style={{ fontFamily: "var(--font-bebas-neue), sans-serif", fontSize: 22, lineHeight: 1.05, color: "#111", letterSpacing: 1 }}>
-                Decoding Melody
-              </div>
-              <p style={{ fontFamily: "Georgia, serif", fontSize: 12, color: "#555", margin: 0, lineHeight: 1.6 }}>
-                A deep dive into how melody works across musical traditions — rhythm, pitch, and loudness.
+              <div style={{ fontFamily: "var(--font-bebas-neue), sans-serif", fontSize: 22 }}>Decoding Melody</div>
+              <p style={{ fontFamily: "Georgia, serif", fontSize: 12, color: "#555", margin: 0 }}>
+                A deep dive into how rhythm, pitch, and loudness come together to create melody.
               </p>
-              <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", color: "#E8473F", marginTop: 2 }}>
-                Read on Substack →
-              </div>
+              <div style={{ fontSize: 9, fontWeight: 700, color: "#E8473F" }}>Read on Substack →</div>
+            </div>
+          </a>
+
+          {/* Scale Primer */}
+          <a href="https://soundinsight.substack.com/p/scale-framework-primer" target="_blank" rel="noopener noreferrer" style={{ display: "flex", gap: 16, textDecoration: "none", border: "2px solid #111", background: "#fff", padding: 14, marginBottom: 18 }}>
+            <div style={{ width: 90, height: 90 }}>
+              <Image src="/ScaleDog.png" alt="Scale Primer" width={90} height={90} />
+            </div>
+            <div>
+              <div style={{ fontFamily: "var(--font-bebas-neue), sans-serif", fontSize: 22 }}>Scale Primer</div>
+              <p style={{ fontFamily: "Georgia, serif", fontSize: 12, color: "#555", margin: 0 }}>
+                An introduction to how pitches combine into scales.
+              </p>
+              <div style={{ fontSize: 9, fontWeight: 700, color: "#E8473F" }}>Read on Substack →</div>
+            </div>
+          </a>
+
+          {/* Gati Primer */}
+          <a href="https://soundinsight.substack.com/p/gati-primer" target="_blank" rel="noopener noreferrer" style={{ display: "flex", gap: 16, textDecoration: "none", border: "2px solid #111", background: "#fff", padding: 14, marginBottom: 18 }}>
+            <div style={{ width: 90, height: 90 }}>
+              <Image src="/GatiPuja.png" alt="Gati Primer" width={90} height={90} />
+            </div>
+            <div>
+              <div style={{ fontFamily: "var(--font-bebas-neue), sans-serif", fontSize: 22 }}>Gati Primer</div>
+              <p style={{ fontFamily: "Georgia, serif", fontSize: 12, color: "#555", margin: 0 }}>
+                An introduction to how beats combine to become gatis.
+              </p>
+              <div style={{ fontSize: 9, fontWeight: 700, color: "#E8473F" }}>Read on Substack →</div>
             </div>
           </a>
 
@@ -138,7 +151,7 @@ export default function Home() {
           </div>
           {[
             { kicker: "Private lessons", title: "Free Your Voice", desc: "Learn to sing freely.", link: "https://www.superprof.co.in/learn-from-professional-musician-how-sing-with-your-free-natural-voice.html", label: "Book a session →" },
-            { kicker: "Private Lessons", title: "Guitar & musicianship", desc: "Learn music like a language.", link: "https://www.superprof.co.in/learn-how-use-music-like-language-from-full-time-musician.html", label: "Book a session →" },
+            { kicker: "Private Lessons", title: "Guitar & Composition", desc: "Learn music like a language.", link: "https://www.superprof.co.in/learn-how-use-music-like-language-from-full-time-musician.html", label: "Book a session →" },
           ].map((item) => (
             <div key={item.kicker} style={{ marginBottom: 20, paddingBottom: 20, borderBottom: "1.5px solid #CCC8BC" }}>
               <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", color: "#555", marginBottom: 6 }}>{item.kicker}</div>
