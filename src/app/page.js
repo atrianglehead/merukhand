@@ -62,7 +62,7 @@ export default function Home() {
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", borderBottom: "3px solid #111" }}>
         <div style={{ padding: "32px 28px 28px", borderRight: "3px solid #111", background: "#F5F2EB" }}>
           <div style={{ display: "inline-block", fontSize: 9, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", border: "1.5px solid #111", padding: "3px 10px", marginBottom: 16, color: "#111" }}>
-            People · Music · Learning
+            People · Learning · Music
           </div>
           <h1 style={{ fontFamily: "var(--font-bebas-neue), sans-serif", fontSize: 88, lineHeight: 0.9, letterSpacing: 2, margin: 0 }}>
             <span style={{ color: "#111", display: "block" }}>MERU</span>
@@ -72,7 +72,7 @@ export default function Home() {
         <div style={{ padding: "32px 28px 28px", background: "#111" }}>
           <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", color: "#F5C842", marginBottom: 10 }}>Intention</div>
           <p style={{ fontFamily: "Georgia, serif", fontSize: 16, fontStyle: "italic", color: "#EEE8D0", lineHeight: 1.6, margin: "0 0 28px" }}>
-            Finding people through music, and music through people.
+            Discovering people through music, and music through people.
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
             <a href="https://soundinsight.substack.com/" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-space-mono), monospace", fontSize: 11, padding: "10px 18px", textDecoration: "none", fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", background: "#F5C842", color: "#111", display: "block" }}>
@@ -95,7 +95,7 @@ export default function Home() {
             Sound Insight
             <span style={{ flex: 1, height: 2, background: "#111", display: "block" }} />
           </div>
-          <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", color: "#E8473F", marginBottom: 12 }}>Latest essay</div>
+          <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", color: "#E8473F", marginBottom: 12 }}>Top Article</div>
 
           {/* Post card */}
           <a
@@ -118,7 +118,7 @@ export default function Home() {
                 Decoding Melody
               </div>
               <p style={{ fontFamily: "Georgia, serif", fontSize: 12, color: "#555", margin: 0, lineHeight: 1.6 }}>
-                A deep dive into how melody works across musical traditions — rhythm, pitch, and the hidden logic that makes music sing.
+                A deep dive into how melody works across musical traditions — rhythm, pitch, and loudness.
               </p>
               <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", color: "#E8473F", marginTop: 2 }}>
                 Read on Substack →
@@ -127,7 +127,7 @@ export default function Home() {
           </a>
 
           <a href="https://soundinsight.substack.com/" target="_blank" rel="noopener noreferrer" style={{ fontSize: 10, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", color: "#E8473F", textDecoration: "none", borderBottom: "2px solid #E8473F", paddingBottom: 1 }}>
-            All essays →
+            All articles →
           </a>
         </div>
 
@@ -137,8 +137,8 @@ export default function Home() {
             <span style={{ flex: 1, height: 2, background: "#111", display: "block" }} />
           </div>
           {[
-            { kicker: "Private lessons", title: "Free Your Voice", desc: "Learn to Sing.", link: "https://www.superprof.co.in/learn-from-professional-musician-how-sing-with-your-free-natural-voice.html", label: "Book a session →" },
-            { kicker: "Private lessons", title: "Guitar & musicianship", desc: "Learn music like a language.", link: "https://www.superprof.co.in/learn-how-use-music-like-language-from-full-time-musician.html", label: "Book a session →" },
+            { kicker: "Private lessons", title: "Free Your Voice", desc: "Learn to sing freely.", link: "https://www.superprof.co.in/learn-from-professional-musician-how-sing-with-your-free-natural-voice.html", label: "Book a session →" },
+            { kicker: "Private Lessons", title: "Guitar & musicianship", desc: "Learn music like a language.", link: "https://www.superprof.co.in/learn-how-use-music-like-language-from-full-time-musician.html", label: "Book a session →" },
           ].map((item) => (
             <div key={item.kicker} style={{ marginBottom: 20, paddingBottom: 20, borderBottom: "1.5px solid #CCC8BC" }}>
               <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", color: "#555", marginBottom: 6 }}>{item.kicker}</div>
@@ -169,9 +169,9 @@ export default function Home() {
           <div style={{ fontFamily: "var(--font-bebas-neue), sans-serif", fontSize: 11, letterSpacing: 2, color: "#fff", textAlign: "center", lineHeight: 1.2 }}>Anirudh<br />Venkatesh</div>
         </div>
         <div style={{ padding: "22px 28px", background: "#F5F2EB" }}>
-          <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", color: "#E8473F", marginBottom: 8 }}>Founder · Musician · Mentor</div>
+          <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", color: "#E8473F", marginBottom: 8 }}>Student · Teacher · Founder</div>
           <p style={{ fontFamily: "Georgia, serif", fontSize: 13, color: "#444", lineHeight: 1.6, margin: "0 0 14px" }}>
-            Music learner, educator, and the mind behind Merukhand — exploring the vast scope of musical traditions and the connections they make possible.
+            Music learner, educator, and facilitator of Merukhand — exploring connections in the vast network of musical traditions.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
             {socialLinks.map((s) => (
