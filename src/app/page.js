@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const socialLinks = [
   {
@@ -61,7 +62,7 @@ export default function Home() {
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", borderBottom: "3px solid #111" }}>
         <div style={{ padding: "32px 28px 28px", borderRight: "3px solid #111", background: "#F5F2EB" }}>
           <div style={{ display: "inline-block", fontSize: 9, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", border: "1.5px solid #111", padding: "3px 10px", marginBottom: 16, color: "#111" }}>
-            People · Music · Learning.
+            People · Music · Learning
           </div>
           <h1 style={{ fontFamily: "var(--font-bebas-neue), sans-serif", fontSize: 88, lineHeight: 0.9, letterSpacing: 2, margin: 0 }}>
             <span style={{ color: "#111", display: "block" }}>MERU</span>
@@ -74,13 +75,13 @@ export default function Home() {
             Finding people through music, and music through people.
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-            <a href="/blog" style={{ fontFamily: "var(--font-space-mono), monospace", fontSize: 11, padding: "10px 18px", textDecoration: "none", fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", background: "#F5C842", color: "#111", display: "block" }}>
+            <a href="https://soundinsight.substack.com/" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-space-mono), monospace", fontSize: 11, padding: "10px 18px", textDecoration: "none", fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", background: "#F5C842", color: "#111", display: "block" }}>
               Read Sound Insight
             </a>
-            <a href="/learn" style={{ fontFamily: "var(--font-space-mono), monospace", fontSize: 11, padding: "10px 18px", textDecoration: "none", fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", background: "transparent", color: "#EEE8D0", border: "2px solid #EEE8D0", display: "block" }}>
+            <a href="https://www.superprof.co.in/learn-from-professional-musician-how-sing-with-your-free-natural-voice.html" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-space-mono), monospace", fontSize: 11, padding: "10px 18px", textDecoration: "none", fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", background: "transparent", color: "#EEE8D0", border: "2px solid #EEE8D0", display: "block" }}>
               Book a lesson
             </a>
-            <a href="/music" style={{ fontFamily: "var(--font-space-mono), monospace", fontSize: 11, padding: "10px 18px", textDecoration: "none", fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", background: "transparent", color: "#888", border: "2px solid #444", display: "block" }}>
+            <a href="https://www.youtube.com/@trianglehead" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-space-mono), monospace", fontSize: 11, padding: "10px 18px", textDecoration: "none", fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", background: "transparent", color: "#888", border: "2px solid #444", display: "block" }}>
               Browse music
             </a>
           </div>
@@ -94,15 +95,39 @@ export default function Home() {
             Sound Insight
             <span style={{ flex: 1, height: 2, background: "#111", display: "block" }} />
           </div>
-          <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", color: "#E8473F", marginBottom: 8 }}>Latest essay</div>
-          <div style={{ fontFamily: "var(--font-bebas-neue), sans-serif", fontSize: 34, lineHeight: 1.05, color: "#111", marginBottom: 12, letterSpacing: 1 }}>
-            On ragas and the logic of musical constraint
-          </div>
-          <p style={{ fontFamily: "Georgia, serif", fontSize: 13, color: "#444", lineHeight: 1.75, margin: "0 0 16px" }}>
-            What does it mean to improvise within a tradition? An exploration of how deep structure enables, rather than limits, musical freedom — and why the raga system is one of humanity&apos;s most sophisticated musical inventions.
-          </p>
-          <a href="/blog" style={{ fontSize: 10, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", color: "#E8473F", textDecoration: "none", borderBottom: "2px solid #E8473F", paddingBottom: 1 }}>
-            Read the essay →
+          <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", color: "#E8473F", marginBottom: 12 }}>Latest essay</div>
+
+          {/* Post card */}
+          <a
+            href="https://soundinsight.substack.com/p/decoding-melody"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ display: "flex", gap: 16, textDecoration: "none", border: "2px solid #111", background: "#fff", padding: 14, marginBottom: 18 }}
+          >
+            <div style={{ flexShrink: 0, width: 90, height: 90, overflow: "hidden", border: "1.5px solid #E0DDD4", background: "#F5F2EB" }}>
+              <Image
+                src="/MelodyTriangle.png"
+                alt="Decoding Melody"
+                width={90}
+                height={90}
+                style={{ objectFit: "cover", width: "100%", height: "100%" }}
+              />
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", gap: 6 }}>
+              <div style={{ fontFamily: "var(--font-bebas-neue), sans-serif", fontSize: 22, lineHeight: 1.05, color: "#111", letterSpacing: 1 }}>
+                Decoding Melody
+              </div>
+              <p style={{ fontFamily: "Georgia, serif", fontSize: 12, color: "#555", margin: 0, lineHeight: 1.6 }}>
+                A deep dive into how melody works across musical traditions — rhythm, pitch, and the hidden logic that makes music sing.
+              </p>
+              <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", color: "#E8473F", marginTop: 2 }}>
+                Read on Substack →
+              </div>
+            </div>
+          </a>
+
+          <a href="https://soundinsight.substack.com/" target="_blank" rel="noopener noreferrer" style={{ fontSize: 10, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", color: "#E8473F", textDecoration: "none", borderBottom: "2px solid #E8473F", paddingBottom: 1 }}>
+            All essays →
           </a>
         </div>
 
