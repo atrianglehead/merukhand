@@ -61,7 +61,7 @@ export default function Home() {
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", borderBottom: "3px solid #111" }}>
         <div style={{ padding: "32px 28px 28px", borderRight: "3px solid #111", background: "#F5F2EB" }}>
           <div style={{ display: "inline-block", fontSize: 9, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", border: "1.5px solid #111", padding: "3px 10px", marginBottom: 16, color: "#111" }}>
-            Indie · Music · Knowledge
+            People · Music · Learning.
           </div>
           <h1 style={{ fontFamily: "var(--font-bebas-neue), sans-serif", fontSize: 88, lineHeight: 0.9, letterSpacing: 2, margin: 0 }}>
             <span style={{ color: "#111", display: "block" }}>MERU</span>
@@ -69,7 +69,7 @@ export default function Home() {
           </h1>
         </div>
         <div style={{ padding: "32px 28px 28px", background: "#111" }}>
-          <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", color: "#F5C842", marginBottom: 10 }}>Our manifesto</div>
+          <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", color: "#F5C842", marginBottom: 10 }}>Intention</div>
           <p style={{ fontFamily: "Georgia, serif", fontSize: 16, fontStyle: "italic", color: "#EEE8D0", lineHeight: 1.6, margin: "0 0 28px" }}>
             Finding people through music, and music through people.
           </p>
@@ -112,8 +112,8 @@ export default function Home() {
             <span style={{ flex: 1, height: 2, background: "#111", display: "block" }} />
           </div>
           {[
-            { kicker: "Private lessons", title: "Indian classical music — voice & theory", desc: "One-to-one sessions tailored to your level and goals.", link: "https://www.superprof.co.in/learn-from-professional-musician-how-sing-with-your-free-natural-voice.html", label: "Book a session →" },
-            { kicker: "SuperProf", title: "Guitar & musicianship", desc: "Learn music as a language, from a full-time musician.", link: "https://www.superprof.co.in/learn-how-use-music-like-language-from-full-time-musician.html", label: "See profile →" },
+            { kicker: "Private lessons", title: "Free Your Voice", desc: "Learn to Sing.", link: "https://www.superprof.co.in/learn-from-professional-musician-how-sing-with-your-free-natural-voice.html", label: "Book a session →" },
+            { kicker: "SuperProf", title: "Guitar & musicianship", desc: "Learn music like a language.", link: "https://www.superprof.co.in/learn-how-use-music-like-language-from-full-time-musician.html", label: "See profile →" },
           ].map((item) => (
             <div key={item.kicker} style={{ marginBottom: 20, paddingBottom: 20, borderBottom: "1.5px solid #CCC8BC" }}>
               <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", color: "#555", marginBottom: 6 }}>{item.kicker}</div>
