@@ -138,7 +138,7 @@ export default function Home() {
           </div>
           {[
             { kicker: "Private lessons", title: "Free Your Voice", desc: "Learn to Sing.", link: "https://www.superprof.co.in/learn-from-professional-musician-how-sing-with-your-free-natural-voice.html", label: "Book a session →" },
-            { kicker: "SuperProf", title: "Guitar & musicianship", desc: "Learn music like a language.", link: "https://www.superprof.co.in/learn-how-use-music-like-language-from-full-time-musician.html", label: "See profile →" },
+            { kicker: "Private lessons", title: "Guitar & musicianship", desc: "Learn music like a language.", link: "https://www.superprof.co.in/learn-how-use-music-like-language-from-full-time-musician.html", label: "Book a session →" },
           ].map((item) => (
             <div key={item.kicker} style={{ marginBottom: 20, paddingBottom: 20, borderBottom: "1.5px solid #CCC8BC" }}>
               <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", color: "#555", marginBottom: 6 }}>{item.kicker}</div>
